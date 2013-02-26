@@ -1,0 +1,58 @@
+<?page title="Spring variable resolver" contentType="text/html;charset=UTF-8"?>
+
+<!-- below init is Access Spring beans in ZK Databinding annotations -->
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+
+<zk>
+<zscript>
+        String msg = "Hello";<!--simpleBean.message;-->
+        
+        import org.zkoss.zkplus.spring.SpringUtil;
+        import org.zkoss.springessentials.beans.*;
+        Person person = (Person)SpringUtil.getBean("person");
+        String firstName = person.getFirstName();
+</zscript>
+
+<window title="Spring variable resolver" border="normal">
+<vbox>
+            <label value="Access Spring beans in EL expressions"></label>
+        <hbox height="100px" >
+            <label value="${simpleBean.message}"></label>
+        </hbox>   
+        
+        
+      
+     
+          
+        <label value="Access Spring beans in ZSCRIPT"></label>
+        <hbox height="100px" >
+           <label value="${msg}"></label>
+        </hbox>
+              
+            
+                
+         <label value="Using SpringUtil"></label>
+         
+       <hbox height="100px"  >
+           <label value="${firstName}"></label>
+        </hbox>
+        
+        
+        
+         <label value="Access Spring beans in ZK Databinding annotations"></label>
+        
+         <grid width="400px">
+        <rows>
+            <row> First Name: <textbox value="@{person.firstName}"/></row>
+            <row> Last Name: <textbox value="@{person.lastName}"/></row>
+            <row> Full Name: <label value="@{person.fullName}"/></row>
+        </rows>
+        
+    </grid>
+        
+     </vbox> 
+    
+</window>
+</zk>
