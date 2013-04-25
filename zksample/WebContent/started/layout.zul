@@ -1,0 +1,118 @@
+<zk>
+	<style src="/widgets/getting_started/css/style.css" />
+	<borderlayout vflex="min" apply="com.turtorial.started.layout.LayoutController">
+		<north sclass="header" height="50px">
+			<label sclass="header-text">Search Car</label>
+		</north>
+		<west title="By Type" collapsible="true" width="160px" vflex="1">
+			<vlayout sclass="fn-panel1" hflex="1" vflex="1">
+				<label sclass="fn-title">Normal Class:</label>
+				<hlayout sclass="fn-subpanel">
+					<vlayout width="60px">
+						<a label="MPV" sclass="fn-type" />
+						<a label="SUV" sclass="fn-type" />
+						<a label="Sedan" sclass="fn-type" />
+					</vlayout>
+					<vlayout>
+						<a label="Sport" sclass="fn-type" />
+						<a label="Supercar" sclass="fn-type" />
+						<a label="Van" sclass="fn-type" />
+					</vlayout>
+				</hlayout>
+				<label sclass="fn-title">Luxurious Class:</label>
+				<hlayout sclass="fn-subpanel">
+					<vlayout width="60px">
+						<a label="MPV" sclass="fn-type" />
+						<a label="SUV" sclass="fn-type" />
+						<a label="Sedan" sclass="fn-type" />
+					</vlayout>
+					<vlayout>
+						<a label="Sport" sclass="fn-type" />
+						<a label="Supercar" sclass="fn-type" />
+						<a label="Van" sclass="fn-type" />
+					</vlayout>
+				</hlayout>
+			</vlayout>
+		</west>
+		<center sclass="nested-center">
+			<borderlayout vflex="min">
+				<west title="By Filter" collapsible="true" splittable="true" width="200px" minsize="200" vflex="min">
+					<vlayout sclass="fn-panel2" hflex="1">
+<!-- 						<tablelayout columns="2" width="100%"> -->
+<!-- 							<tablechildren colspan="2"> -->
+<!-- 								<label sclass="fn-title">Accessories:</label> -->
+<!-- 							</tablechildren> -->
+<!-- 							<tablechildren> -->
+<!-- 								<checkbox label="ABS" sclass="fn-condi" /> -->
+<!-- 							</tablechildren> -->
+<!-- 							<tablechildren> -->
+<!-- 								<checkbox label="Airbag" sclass="fn-condi" /> -->
+<!-- 							</tablechildren> -->
+<!-- 							<tablechildren> -->
+<!-- 								<checkbox label="GPS" sclass="fn-condi" /> -->
+<!-- 							</tablechildren> -->
+<!-- 							<tablechildren> -->
+<!-- 								<checkbox label="Keyless" sclass="fn-condi" /> -->
+<!-- 							</tablechildren> -->
+<!-- 							<tablechildren> -->
+<!-- 								<checkbox label="Bumper" sclass="fn-condi" /> -->
+<!-- 							</tablechildren> -->
+<!-- 							<tablechildren> -->
+<!-- 								<checkbox label="Bike Rack" sclass="fn-condi" /> -->
+<!-- 							</tablechildren> -->
+<!-- 							<tablechildren colspan="2"> -->
+<!-- 								<label sclass="fn-title">Countries:</label> -->
+<!-- 							</tablechildren> -->
+<!-- 							<tablechildren> -->
+<!-- 								<checkbox label="America" sclass="fn-condi" /> -->
+<!-- 							</tablechildren> -->
+<!-- 							<tablechildren> -->
+<!-- 								<checkbox label="Britain" sclass="fn-condi" /> -->
+<!-- 							</tablechildren> -->
+<!-- 							<tablechildren> -->
+<!-- 								<checkbox label="China" sclass="fn-condi" /> -->
+<!-- 							</tablechildren> -->
+<!-- 							<tablechildren> -->
+<!-- 								<checkbox label="France" sclass="fn-condi" /> -->
+<!-- 							</tablechildren> -->
+<!-- 							<tablechildren> -->
+<!-- 								<checkbox label="Germany" sclass="fn-condi" /> -->
+<!-- 							</tablechildren> -->
+<!-- 							<tablechildren> -->
+<!-- 								<checkbox label="Italy" sclass="fn-condi" /> -->
+<!-- 							</tablechildren> -->
+<!-- 						</tablelayout> -->
+						<space height="10px" />
+						<button label="Search" />
+					</vlayout>
+				</west>
+				<center>
+					<tabbox height="100%">
+						<tabs>
+							<tab label="Search Result 1" closable="false" />
+							<tab label="Search Result 2" closable="true" />
+						</tabs>
+						<tabpanels>
+							<tabpanel>
+								<hbox align="center" pack="center" hflex="1" vflex="1">
+									<image src="/img/car1.jpg" />
+								</hbox>
+							</tabpanel>
+							<tabpanel>
+								<hbox align="center" pack="center" hflex="1" vflex="1">
+									<image src="/img/car.jpg" />
+								</hbox>
+							</tabpanel>
+						</tabpanels>
+					</tabbox>
+				</center>
+			</borderlayout>
+		</center>
+		<south sclass="footer" height="50px">
+			<vbox align="center" pack="center" width="100%" sclass="footer-box">
+				<label sclass="footer_text">Copyright ? 2005-2012</label>
+				<label sclass="footer_text">Potix Corporation All rights reserved.</label>
+			</vbox>
+		</south>
+	</borderlayout>
+</zk>

@@ -1,0 +1,38 @@
+<window id="win" title="Car Inventory Editor" width="400px" border="normal"
+	apply="com.turtorial.started.input.EditController">
+	<grid>
+		<rows>
+			<row>
+				Title:
+				<textbox id="titleTextbox" value="${win$composer.inventoryItem.title}"
+					constraint="no empty" />
+			</row>
+			<row>
+				Created Date (yyyy/MM/dd):
+				<datebox id="createdDatebox" value="${win$composer.inventoryItem.createdDate}"
+					format="yyyy/MM/dd" constraint="no empty" />
+			</row>
+			<row>
+				Bar Code:
+				<intbox id="barcodeIntbox" value="${win$composer.inventoryItem.barcode}"
+					format="000000" constraint="no empty,no negative" />
+			</row>
+			<row>
+				Unit Price:
+				<doublebox id="unitPriceDoublebox" value="${win$composer.inventoryItem.unitPrice}"
+					format=",###.#" constraint="no empty,no negative" />
+			</row>
+			<row>
+				Quantity:
+				<spinner id="quantitySpinner" value="${win$composer.inventoryItem.quantity}"
+					format=",###" constraint="no empty,min 0" />
+			</row>
+			<row>
+				Location (click location to edit):
+				<textbox id="locationTextbox" value="${win$composer.inventoryItem.location}"
+					inplace="true" />
+			</row>
+		</rows>
+	</grid>
+	<button id="submitButton" label="Submit" />
+</window>

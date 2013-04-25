@@ -1,0 +1,30 @@
+<window id="win" title="Car List" border="normal"
+	apply="com.turtorial.started.listbox.ListboxController">
+	<listbox model="${win$composer.carsModel}" checkmark="true"  mold="paging" pageSize="9">
+		<listhead>
+			<listheader width="32px" />
+			<listheader label="Model" align="center" sort="auto(model)" />
+			<listheader label="Make" align="center" sort="auto(make)" />
+			<listheader label="Type" align="center" sort="auto(type)" />
+			<listheader label="Cost" align="center" sort="auto(cost)" image="/widgets/getting_started/img/dollar.png" />
+			<listheader label="Displacement" align="center" sort="auto(engineDisplacement)" />
+			<listheader label="Transmission" align="center" />
+			<listheader label="Country" align="center" sort="auto(country)" width="130px" />
+		</listhead>
+		<template name="model">
+			<listitem>
+				<listcell />
+				<listcell label="${each.model}" />
+				<listcell label="${each.make}" />
+				<listcell label="${each.type}" />
+				<listcell label="${each.cost}" style="text-align: right"/>
+				<listcell label="${each.engineDisplacement} c.c." style="text-align: right"/>
+				<listcell label="${each.autoTransmission ? 'AT' : 'MT'}"/>
+				<listcell style="text-align: left">
+					
+					<label value="${each.country}" />
+				</listcell>
+			</listitem>
+		</template>
+	</listbox>
+</window>

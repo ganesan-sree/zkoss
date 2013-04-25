@@ -1,0 +1,52 @@
+<?page title="Fast Proto Typing " contentType="text/html;charset=UTF-8"?>
+<window title="Item List" width="100%" border="normal"  height="100%">
+    <hbox align="center">
+        Name :
+        <textbox id="itemName" constraint="no empty" />
+        <!-- call a method directly in an event -->
+        <button label="Add Item" onClick="addItem(itemName.getValue())" />
+        <button label="Delete Item" onClick="deleteItem()" />
+    </hbox>
+    <groupbox>
+        <caption>
+            Total Items : <label id="itemCount"/>
+        </caption>
+        <listbox id="itemList" rows="25">
+            <listhead>
+                <listheader label="Item" />
+            </listhead>
+            <listitem label="Nissan Primera"/>
+        </listbox>
+    </groupbox>
+
+    <zscript><![CDATA[
+         
+        //declare zscript methods
+        void addItem(String name){
+            //you could new a component directly and append it to another component.
+            Listitem item = new Listitem(name);
+            itemList.appendChild(item);
+            //select the new created item.
+            itemList.setSelectedItem(item);
+            updateItemCount();
+        }
+        void deleteItem(){
+            int index = itemList.getSelectedIndex();
+            if(index >= 0){
+                //remove the selected item
+                itemList.removeItemAt(index);
+                updateItemCount();
+            }else{
+                //a easy way to show a message to user
+                alert("Please select an item first!");
+            }
+        }
+        void updateItemCount(){
+            //update extra information for user
+            itemCount.setValue(Integer.toString(itemList.getItemCount()));
+        }
+         
+        //initialize
+        updateItemCount();
+    ]]></zscript>
+</window>

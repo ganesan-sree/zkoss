@@ -3,7 +3,6 @@
 
 <window title="Easymed Appointment calender" border="normal">
 
-    <calendars firstDayOfWeek="Sunday"mold="default"
-     />
+    <calendars firstDayOfWeek="Sunday" mold="default"/>
     </window>
 </zk>

@@ -1,0 +1,97 @@
+<window title="ZK Car Catalog Management Console" border="normal" 
+	apply="com.turtorial.started.menu_toolbar.MenuController">
+	<style src="/widgets/getting_started/menu_toolbar/style.css" />
+	<menubar autodrop="true">
+		<menu label="Car">
+			<menupopup>
+				<menu label="New">
+					<menupopup>
+						<menuitem label="Small Car" />
+						<menuitem label="Mediem Car" />
+						<menuitem label="Large Car" />
+					</menupopup>
+				</menu>
+				<menuitem label="Search" />
+			</menupopup>
+		</menu>
+				
+		<menu label="Edit">
+			<menupopup>
+				<menuitem label="Undo"
+					image="/widgets/getting_started/menu_toolbar/img/edit_undo.png" />
+				<menuitem label="Redo" disabled="true"
+					image="/widgets/getting_started/menu_toolbar/img/edit_redo.png" />
+				<menuseparator />
+				<menuitem label="Cut"
+					image="/widgets/getting_started/menu_toolbar/img/edit_cut.png" />
+				<menuitem label="Copy"
+					image="/widgets/getting_started/menu_toolbar/img/edit_copy.png" />
+				<menuitem label="Paste"
+					image="/widgets/getting_started/menu_toolbar/img/edit_paste.png" />
+				<menuseparator />
+				<menuitem label="Select All"
+					image="/widgets/getting_started/menu_toolbar/img/edit_select-all.png" />
+			</menupopup>
+		</menu>
+				
+		<menu label="View">
+			<menupopup>
+				<menuitem label="Sort by Name" checkmark="true" autocheck="true" />
+				<menuitem label="Sort by Date" checkmark="true" autocheck="true" />
+			</menupopup>
+		</menu>
+					
+		<menu label="Help">
+			<menupopup>
+				<menuitem label="Help Content" />
+				<menuitem label="About" />
+			</menupopup>
+		</menu>			
+	</menubar>
+	
+	
+	
+	
+	<toolbar>
+		<toolbarbutton image="/widgets/getting_started/menu_toolbar/img/file_new.png" tooltiptext="New"/>
+		<toolbarbutton image="/widgets/getting_started/menu_toolbar/img/edit_undo.png" tooltiptext="Undo"/>
+		<toolbarbutton image="/widgets/getting_started/menu_toolbar/img/edit_cut.png" tooltiptext="Cut"/>
+		<toolbarbutton image="/widgets/getting_started/menu_toolbar/img/edit_copy.png" tooltiptext="Copy"/>
+		<toolbarbutton image="/widgets/getting_started/menu_toolbar/img/edit_paste.png" tooltiptext="Paste"/>
+	</toolbar>
+	
+	
+	<menupopup id="editPopup">
+		<menuitem label="View" />
+		<menuitem label="Edit" />
+		<menuitem label="Delete" />
+	</menupopup>
+	
+<hlayout style="border:1px solid black;overflow:auto;">
+
+	
+	<image src="/widgets/getting_started/img/car1.png" width="140px" sclass="icon"
+		tooltiptext="Right click to show menu" context="editPopup" />
+	<image src="/widgets/getting_started/img/car2.png" width="140px" sclass="icon"
+		tooltiptext="Right click to show menu" context="editPopup" />
+	<image src="/widgets/getting_started/img/car3.png" width="140px" sclass="icon"
+		tooltiptext="Right click to show menu" context="editPopup" />
+	<image src="/widgets/getting_started/img/car4.png" width="140px" sclass="icon"
+		tooltiptext="Right click to show menu" context="editPopup" />
+	<image src="/widgets/getting_started/img/car5.png" width="140px" sclass="icon"
+		tooltiptext="Right click to show menu" context="editPopup" />
+	<image src="/widgets/getting_started/img/car6.png" width="140px" sclass="icon"
+		tooltiptext="Right click to show menu" context="editPopup" />
+	
+</hlayout>	
+		
+	<hlayout sclass="taskbar">
+		<button image="/widgets/getting_started/menu_toolbar/img/windows.png" />
+		<button id="left" label="Cars on Sale"
+			image="/widgets/getting_started/menu_toolbar/img/sticker_blue_sale.png" />
+		<button id="right" label="50% Off Cars"
+			image="/widgets/getting_started/menu_toolbar/img/sticker_blue_50off.png" />
+	</hlayout>
+	
+	
+</window>

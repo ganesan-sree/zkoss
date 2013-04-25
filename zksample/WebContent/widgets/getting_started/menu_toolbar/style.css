@@ -1,0 +1,20 @@
+.icon{
+	margin:20px 20px 20px 20px;
+	padding: 5px;
+}
+.icon:hover{  
+	border-radius:5px;
+	padding: 3px;
+	border: 2px solid #77AAFF;
+}
+.taskbar{
+	background-color:lightgray;
+}
+.windowStyle.z-window-embedded-cnt, 
+	              .z-window-embedded-body, 
+	              .z-window-overlapped-body, 
+	              .z-window-popup-body, 
+	              .z-window-highlighted-body, 
+	              .z-window-modal-body{
+	 	overflow:auto;
+}

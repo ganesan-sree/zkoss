@@ -1,0 +1,13 @@
+.detail {
+	margin: 1px;
+	padding: 4px 8px;
+	background-color: #FBFBFB;
+}
+.detail-row {
+	height: 20px;
+	padding-top: 4px;
+}
+.detail-row .title {
+	font-weight: bold;
+	padding-right: 4px;
+}

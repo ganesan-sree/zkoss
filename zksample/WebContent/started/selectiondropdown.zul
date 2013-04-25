@@ -1,0 +1,66 @@
+<window id="win" title="Car Editor" width="400px" border="normal"
+	apply="com.turtorial.started.selection_dropdown.EditController">
+	<grid>
+		<columns>
+			<column width="100px" />
+			<column />
+		</columns>
+		<rows>
+			<row>
+				Model:
+				<label value="${win$composer.car.model}" />
+			</row>
+			<row>
+				Transmission:
+				<radiogroup id="transmissionRadiogroup">
+					<hlayout>
+						<radio id="automaticRadio" label="Automatic"
+							selected="${win$composer.car.autoTransmission}" />
+						<radio id="manualRadio" label="Manual"
+							selected="${not win$composer.car.autoTransmission}" />
+					</hlayout>
+				</radiogroup>
+			</row>
+			<row>
+				Accessories:
+				<hlayout id="accessories">
+					<checkbox id="absCheckbox" label="ABS"
+						checked="${win$composer.car.accessories.abs}" />
+					<checkbox id="airbagCheckbox" label="Airbag"
+						checked="${win$composer.car.accessories.airbag}" />
+					<checkbox id="gpsCheckbox" label="GPS"
+						checked="${win$composer.car.accessories.gps}" />
+					<checkbox id="keylessCheckbox" label="Keyless"
+						checked="${win$composer.car.accessories.keyless}" />
+				</hlayout>
+			</row>
+			<row>
+				Type:
+				<selectbox id="typesSelectbox" model="${win$composer.typesModel}" >
+					<template name="model">
+						<label value="${each}" />
+					</template>
+				</selectbox>
+			</row>
+			<row>
+				Origin:
+				<combobox id="countriesCombobox" model="${win$composer.countriesModel}"
+					autodrop="true">
+					<template name="model">
+						<comboitem label="${each}" />
+					</template>
+				</combobox>
+			</row>
+			<row valign="top">
+				Salesmen:
+				<listbox id="salesmenListbox" model="${win$composer.salesmenModel}"
+					checkmark="true">
+					<template name="model">
+						<listitem label="${each}" />
+					</template>
+				</listbox>
+			</row>
+		</rows>
+	</grid>
+	<button id="submitButton" label="Submit" />
+</window>

@@ -1,0 +1,74 @@
+<zk>
+	<style src="/widgets/getting_started/grid/style.css"/>
+	<window id="win" title="Car List"  border="normal" apply="com.turtorial.started.grid.CarListController">
+	
+	
+		<grid model="${win$composer.carsModel}" mold="paging" pageSize="5">
+			<auxhead>
+				<auxheader />
+				<auxheader label="General Specification" align="center" colspan="2" />
+				<auxheader label="Tech Specification" align="center" colspan="3" />
+			</auxhead>
+			<columns>
+				<column width="40px" />
+				<column label="Model" align="center" sort="auto(model)" />
+				<column label="Make" align="center" sort="auto(make)" />
+				<column label="Cost" align="center" sort="auto(cost)" image="/widgets/getting_started/img/dollar.png" />
+				<column label="Displacement" align="center" sort="auto(engineDisplacement)" />
+				<column label="Transmission" align="center" sort="auto(autoTransmission)" />
+			</columns>
+			
+			
+			<template name="model">
+				<row>
+				
+				
+					<detail>
+						<hlayout sclass="detail" style="border:1px solid black;overflow:auto;">
+							<image width="128px" style="margin: 8px"
+								src="/widgets/getting_started/img/car2.png" />
+							<vlayout>
+								<hlayout sclass="detail-row">
+									<label value="Type :" sclass="title" />
+									<label value="${each.type}" />
+								</hlayout>
+								<hlayout sclass="detail-row">
+									<label value="Accessories :" sclass="title" />
+									<label value="${each.accessories}" />
+								</hlayout>
+								<hlayout sclass="detail-row">
+									<label value="Country :" sclass="title" />
+									<hlayout>
+										<label value="${each.country}" />										
+									</hlayout>
+								</hlayout>
+								<hlayout sclass="detail-row">
+									<label value="Salesmen :" sclass="title" />
+									<label value="${each.salesmen}" />
+								</hlayout>
+							</vlayout>
+						</hlayout>
+					</detail>
+					
+					
+					
+					<label value="${each.model}" />
+					<label value="${each.make}" />
+					<label value="${each.cost}" />
+					<label value="${each.engineDisplacement} c.c." />
+					<hlayout>						
+						<label value="${each.autoTransmission ? 'AT' : 'MT'}" />
+					</hlayout>
+					
+					
+					
+				</row>
+			</template>
+			
+			
+		</grid>
+		
+		
+		
+	</window>
+</zk>

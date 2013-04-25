@@ -1,0 +1,57 @@
+.header{
+	background-color:#F0F0F0;
+}
+
+.header div{
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.header-text{
+	font-size: 26px;
+	font-style: bold;
+}
+.footer{
+	background-color: #F0F0F0;
+}
+.footer-box{
+	padding-top: 10px;
+}
+
+.nested-center .z-west,.nested-center .z-center{
+	border-top:0px;
+	border-left:0px;
+	border-bottom:0px;
+}
+.nested-center .z-center{
+	padding:1px 0 0 1px;
+}
+
+.fn-panel1{
+	margin: 2px;
+	padding-top: 4px;
+	background-color: #FAFAFA;
+}
+.fn-panel2{
+	margin: 2px;
+	background-color: #FAFAFA;
+}
+
+.fn-title{
+	font-weight:bold;
+	font-size: 14px;
+}
+.fn-subpanel{
+	padding: 2px 0 10px 5px;
+}
+.fn-type{
+	color: black;
+    font-size: 14px;
+    text-decoration: none;
+    font-style: italic;
+    padding: 2px 0;
+}
+.fn-condi .z-checkbox-cnt{
+	color: black;
+    font-size: 14px;
+}

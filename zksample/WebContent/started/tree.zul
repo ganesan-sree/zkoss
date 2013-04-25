@@ -1,0 +1,48 @@
+<window id="win" title="Car Categories" border="normal"
+	apply="com.turtorial.started.tree.CategoryController">
+	<hlayout height="300px">
+		<tree id="categoriesTree" model="${win$composer.categoriesModel}" width="220px" vflex="1">
+			<treecols>
+				<treecol label="Filter" />
+				<treecol label="Count" align="center" width="55px" />
+			</treecols>
+			<template name="model">
+				<treeitem>
+					<treerow>
+						<treecell label="${each.description}" />
+						<treecell label="${each.count}" />
+					</treerow>
+				</treeitem>
+			</template>
+		</tree>
+		
+		
+		
+		
+		
+		<grid id="resultGrid" hflex="1" vflex="1">
+			<columns>
+				<column label="Model" align="center" />
+				<column label="Make" align="center" />
+				<column label="Type" align="center" />
+				<column label="Displacement" align="center" />
+				<column label="Transmission" align="center" />
+			</columns>
+			<template name="model">
+				<row>
+					<label value="${each.model}" />
+					<label value="${each.make}" />
+					<label value="${each.type}" />
+					<label value="${each.engineDisplacement} c.c." />
+					<hlayout>						
+						<label value="${each.autoTransmission ? 'AT' : 'MT'}" />
+					</hlayout>
+				</row>
+			</template>
+		</grid>
+		
+		
+		
+		
+	</hlayout>
+</window>

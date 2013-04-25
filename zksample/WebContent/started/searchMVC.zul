@@ -1,0 +1,47 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Search" width="600px" border="normal" apply="com.turtorial.started.mvc.SearchController">
+    <!-- put child components inside a tag's body -->
+    
+    
+ <!-- first child -->   
+ <hbox align="center">
+    Keyword:
+    <textbox id="keywordBox" />
+    <button id="searchButton" label="Search" image="/widgets/getting_started/img/search.png" />
+</hbox>
+
+ <!-- second child -->   
+<listbox id="carListbox" height="160px" emptyMessage="No car found in the result">
+    <listhead>
+        <listheader label="Model" />
+        <listheader label="Make" />
+        <listheader label="Price" width="20%"/>
+    </listhead>
+    <template name="model">
+        <listitem>
+            <listcell label="${each.model}"></listcell>
+            <listcell label="${each.make}"></listcell>
+            <listcell>$<label value="${each.price}" /></listcell>
+        </listitem>
+    </template>
+</listbox>
+
+ <!-- third child -->   
+<hbox style="margin-top:20px" id="detailBox" visible="false">
+    <image id="previewImage" width="250px" />
+    <vbox>
+        <label id="modelLabel" />
+        <label id="makeLabel" />
+        <label id="priceLabel" />
+        <label id="descriptionLabel"/>
+    </vbox>
+</hbox>
+    
+    
+    
+    
+    
+    
+</window>
+</zk>
