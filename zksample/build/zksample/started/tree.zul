@@ -15,6 +15,11 @@
 				</treeitem>
 			</template>
 		</tree>
+		
+		
+		
+		
+		
 		<grid id="resultGrid" hflex="1" vflex="1">
 			<columns>
 				<column label="Model" align="center" />
@@ -29,12 +34,15 @@
 					<label value="${each.make}" />
 					<label value="${each.type}" />
 					<label value="${each.engineDisplacement} c.c." />
-					<hlayout>
-						<image src="/widgets/getting_started/img/${each.autoTransmission ? 'at' : 'mt' }.png" />
+					<hlayout>						
 						<label value="${each.autoTransmission ? 'AT' : 'MT'}" />
 					</hlayout>
 				</row>
 			</template>
 		</grid>
+		
+		
+		
+		
 	</hlayout>
 </window>
