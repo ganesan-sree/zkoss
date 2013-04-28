@@ -20,12 +20,15 @@
 				<z:treecols sizable="true">
 					<z:treecol label="Name"/>
 				</z:treecols>
+				
 				<z:treechildren>
+				
 				<c:forEach var="i" begin="1" end="3" step="1" varStatus="status">
 					<z:treeitem>
 						<z:treerow>
 							<z:treecell label="Item ${i}"/>
 						</z:treerow>
+						
 						<z:treechildren>
 							<c:forEach var="j" begin="1" end="3" step="1" varStatus="status">
 							<z:treeitem>
@@ -42,11 +45,14 @@
 									</c:forEach>
 								</z:treechildren>
 							</z:treeitem>
-							</c:forEach>
+							</c:forEach>							
 						</z:treechildren>
+						
 					</z:treeitem>
 					</c:forEach>
+					
 				</z:treechildren>
+				
 			</z:tree>
 			</z:window>
       	</z:page>

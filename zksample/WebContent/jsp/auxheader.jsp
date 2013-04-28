@@ -24,7 +24,7 @@
 					<z:listheader label="Description" width="25%" sort="auto" image="/img/home.gif"/>
 				</z:listhead>
 				<z:auxhead>
-					<z:auxheader label="All Header" style="font-weight:bold; color:red;" align="center" colspan="4"/>
+					<z:auxheader label="All aux Header" style="font-weight:bold; color:red;" align="center" colspan="4"/>
 				</z:auxhead>
 				<z:auxhead>
 					<z:auxheader label="A+B" rowspan="2" colspan="2"/>

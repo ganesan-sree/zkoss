@@ -55,7 +55,7 @@
 		model.setFieldType("Price", PivotField.Type.DATA);
 	</z:zscript>
 	<z:window id="mainWin" height="600px">
-	    <z:pivottable model="${model}" grandTotalForColumns="false" grandTotalForRows="false" />
+	    <z:pivottable model="${model}"  grandTotalForColumns="false" grandTotalForRows="false"  />
 	</z:window>
 </z:page>
 </body>

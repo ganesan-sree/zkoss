@@ -1,7 +1,7 @@
 <project name="default-configs">
 
 	<!-- BASEPATH IS THE PATH TO WORKSPACE AND IS THE ONLY VARIABLE YOU SHOULD MODIFY -->
-	<property name="basepath" value="/home/ganesan/"/>
+	<property name="basepath" value="/home/ganesh/"/>
 		
 	<!-- location of source code to be compiled -->	
 	<property name="dir.home" 		value="${basepath}/git/zkoss/zksample"/>
@@ -17,7 +17,7 @@
 	
 	
 	<!-- root location of the deploy directory in the server -->
-	<property name="server.apps" value="/home/ganesan/Softwares/jboss-6.0.0.Final/server/default/deploy"/>
+	<property name="server.apps" value="/home/ganesh/Softwares/jboss-6.0.0.Final/server/default/deploy"/>
 
 </project>
 
