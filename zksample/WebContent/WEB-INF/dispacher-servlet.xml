@@ -12,15 +12,23 @@
 	<bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
         <property name="prefix">
-            <value>/spring/</value>
+            <value>/task/</value>
         </property>
         <property name="suffix">
-            <value>.jsp</value>
+            <value></value>
         </property>
     </bean>
 
+
+<mvc:annotation-driven />
+	
+	<mvc:resources location="/task/images/" mapping="/img/**" />
+	
+	<context:component-scan base-package="com.task.springmvc" />
+<!-- 	<context:component-scan base-package="demo.data.service" /> -->
+
    <context:component-scan  base-package="com.test"/>
-              	<mvc:annotation-driven />
+              
            
 	   
 </beans>

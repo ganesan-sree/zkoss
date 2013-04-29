@@ -1,0 +1,19 @@
+<?page title="Shopping Cart Sample - Login" ?>
+<zk xmlns:n="native">
+	<window title="Login" mode="modal" position="center,center" border="normal" width="300px">
+		<n:form action="login" method="post">
+		<grid  width="100%">
+			<rows>
+				<row>Name: <textbox name="username" /></row>
+				<row>Password: <textbox name="password" type="password" /></row>
+			</rows>
+			<foot>
+				<footer span="2" style="text-align: right;">
+					<n:input type="reset" value="Reset" />
+					<n:input type="submit" value="Login" />
+				</footer>
+			</foot>
+		</grid>
+		</n:form>
+	</window>
+</zk>
