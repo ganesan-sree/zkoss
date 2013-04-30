@@ -2,12 +2,12 @@
 	<style src="/widgets/application/zk_calendar/style.css" />
 	<window>
 		<!-- Calendars Body -->
-		<div apply="demo.app.zk_calendar.CalendarController">
+		<div apply="com.calender.CalendarController">
 			<!-- Control Menu -->
 			<hlayout sclass="z-valign-middle">
 				<button id="today" label="Today" />
-				<button id="prev" image="/widgets/application/zk_calendar/img/arrow-180.png"/>
-				<button id="next" image="/widgets/application/zk_calendar/img/arrow.png"/>
+				<button id="prev" image="/calender/widgets/application/zk_calendar/img/arrow-180.png"/>
+				<button id="next" image="/calender/widgets/application/zk_calendar/img/arrow.png"/>
 				<separator width="50px" />
 				<button id="pageDay" label="Day" width="55px" />
 				<button id="pageWeek" label="Week" width="55px"/>
@@ -25,12 +25,12 @@
 		</div>
 
 		<!-- Create/Update Event Popup -->
-		<include src="/widgets/application/zk_calendar/calendar_editor.zul" />
+		<include src="/calender/widgets/application/zk_calendar/calendar_editor.zul" />
 
 		<!-- Server+Client Fusion - Mouse Scroll Handling -->
 		<script type="text/javascript"
-			src="/js/lib/jquery.mousewheel.min.js" />
+			src="/calender/js/lib/jquery.mousewheel.min.js" />
 		<script type="text/javascript"
-			src="/widgets/application/zk_calendar/scroll.js" />
+			src="/calender/widgets/application/zk_calendar/scroll.js" />
 	</window>
 </zk>

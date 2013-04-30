@@ -31,6 +31,7 @@ public class CalendarController extends SelectorComposer<Component> {
 	public void doAfterCompose(Component comp) throws Exception {
 		super.doAfterCompose(comp);
 		calendarModel = new DemoCalendarModel(new DemoCalendarData().getCalendarEvents());
+		System.out.println("start loading ..................... all the data and serring model into calendar;;\n calendars.setModel(this.calendarModel) \n\n");
 		calendars.setModel(this.calendarModel);
 	}
 	
@@ -38,30 +39,36 @@ public class CalendarController extends SelectorComposer<Component> {
 	@Listen("onClick = #today")
 	public void gotoToday(){
 		TimeZone timeZone = calendars.getDefaultTimeZone();
+		System.out.println("setting today date .....................calendars.setCurrentDate(Calendar.getInstance(timeZone).getTime())\n\n");
 		calendars.setCurrentDate(Calendar.getInstance(timeZone).getTime());
 	}
 	@Listen("onClick = #next")
 	public void gotoNext(){
+		System.out.println("move to prevoius page .....................calendars.nextPage()\n\n");
 		calendars.nextPage();
 	}
 	@Listen("onClick = #prev")
 	public void gotoPrev(){
+		System.out.println("move to prevoius page .....................calendars.previousPage()\n\n");
 		calendars.previousPage();
 	}
 	
 	//control page display
 	@Listen("onClick = #pageDay")
 	public void changeToDay(){
+		System.out.println("set no of days .....................calendars.setDays(2)\n\n");
 		calendars.setMold("default");
-		calendars.setDays(1);
+		calendars.setDays(2);
 	}
 	@Listen("onClick = #pageWeek")
 	public void changeToWeek(){
+		System.out.println("changeToWeek .....................calendars.setDays(7)\n\n");
 		calendars.setMold("default");
 		calendars.setDays(7);
 	}
 	@Listen("onClick = #pageMonth")
 	public void changeToYear(){
+		System.out.println("pageMonth .....................calendars.setMold('month')\n\n");
 		calendars.setMold("month");
 	}
 	

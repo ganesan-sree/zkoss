@@ -1,0 +1,21 @@
+<?page title="News Calendar" contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+<?component name="CreateDialog" macroURI="createEntry.zul"?>
+<?component name="UpdateDialog" macroURI="updateEntry.zul"?>
+<zk>
+	<window id="win" border="none" apply="com.calender.newsfeed.controllers.NewsController" height="100%" width="100%">
+		<CreateDialog id="creationDialog" />
+		<UpdateDialog id="updateDialog" />
+		<borderlayout>
+			<center>
+				<calendars firstDayOfWeek="Sunday" timeZone="California=PDT-8" model="@{win$composer.getCalendarModel}" 
+					 mold="default" id="cal">
+				</calendars>
+			</center>
+			<south title="South" maxsize="200" size="300" collapsible="true" open="false">
+				<chart id="piechart" title="What type of News?" width="400px" height="250px" type="pie" />
+			</south>
+		</borderlayout>
+	</window>
+	
+</zk>

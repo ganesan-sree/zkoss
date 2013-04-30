@@ -33,6 +33,7 @@ public class CalendarEditorViewModel {
 
 	@Init
 	public void init() {
+		System.out.println("inititititttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt");
 		//subscribe a queue, listen to other controller
 		QueueUtil.lookupQueue().subscribe(new QueueListener());
 	}

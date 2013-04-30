@@ -1,5 +1,5 @@
 <div apply="org.zkoss.bind.BindComposer"
-	viewModel="@id('vm') @init('demo.app.zk_calendar.CalendarEditorViewModel')"
+	viewModel="@id('vm') @init('com.calender.CalendarEditorViewModel')"
 	validationMessages="@id('vmsgs')">
 	<window title="Create Calendar Event" border="normal" width="400px" 
 		form="@id('fx') @load(vm.calendarEvent) @save(vm.calendarEvent, before='ok') @validator(vm.dateValidator)"
