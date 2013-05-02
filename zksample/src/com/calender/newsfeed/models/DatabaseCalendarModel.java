@@ -34,9 +34,8 @@ public final class DatabaseCalendarModel {
 			}
 		}
 		
-		for(int j=0; j<3; j++) {
-			Integer count = new Integer(counts[j]);
-			_simplePieModel.setValue(NewsColors._type[j], count);
+		for(int j=0; j<3; j++) {		
+			_simplePieModel.setValue(NewsColors._type[j], 33);
 		}
 	}
 

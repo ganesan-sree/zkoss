@@ -16,7 +16,7 @@ public class NewsDAO {
 	
 	public NewsDAO() {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.ibm.db2.jcc.DB2Driver");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -44,20 +44,16 @@ public class NewsDAO {
 				System.out.println(rs.toString());
 				
 				ni = new NewsItem();
-				
-				Date dt = new Date();
-
-				ni.setNews_item(rs.getInt(1));
-				dt.setTime(rs.getLong(2));
-				ni.setBeginDate((Date)dt.clone());
-				dt.setTime(rs.getLong(3));
-				ni.setEndDate((Date)dt.clone());
+								
+				ni.setNews_item(rs.getInt(1));				
+				ni.setBeginDate(rs.getTimestamp(2));				
+				ni.setEndDate(rs.getTimestamp(3));
 				
 				ni.setTitle(rs.getString(4));
 				ni.setContent(rs.getString(5));
 				ni.setHeaderColor(rs.getString(6));
 				ni.setContentColor(rs.getString(7));
-				ni.setLocked(rs.getBoolean(8));
+				ni.setLocked(Boolean.getBoolean(rs.getString(8)));
 							
 				allObjects.add(ni);
 			}

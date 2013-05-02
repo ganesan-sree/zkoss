@@ -1,6 +1,10 @@
 package com.calender.newsfeed.controllers;
 
+import java.util.Collection;
+
 import org.zkoss.calendar.event.CalendarsEvent;
+import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.util.GenericForwardComposer;
 import org.zkoss.zul.Chart;
 import org.zkoss.zul.Combobox;
@@ -13,6 +17,7 @@ import com.calender.newsfeed.models.NewsItem;
 
 public class EventCreationController extends GenericForwardComposer  {
 	
+
 	Window createMyEntry;
 	Combobox cmbType;
 	Textbox tbText;
@@ -27,8 +32,18 @@ public class EventCreationController extends GenericForwardComposer  {
 		CalendarsEvent evt = ((org.zkoss.calendar.event.CalendarsEvent)createMyEntry.getAttribute("calevent"));
 		
 		Window win = (Window)createMyEntry.getParent();
-		org.zkoss.calendar.Calendars cals = (org.zkoss.calendar.Calendars)win.getAttribute("cal", false);
-		Chart piechart = (Chart)win.getAttribute("piechart", false);
+		Component rootComponent=win.getRoot();
+		
+		Collection<Component> list=rootComponent.getFellows();
+		
+		java.util.Iterator<Component> it=list.iterator();
+		while(it.hasNext()){
+			System.out.println(it.next().toString());
+		}
+		
+		
+		org.zkoss.calendar.Calendars cals = (org.zkoss.calendar.Calendars)rootComponent.getFellow("cal");
+		Chart piechart = (Chart)win.getFellow("piechart", false);
 		
 		NewsItem ni = new NewsItem();
 		

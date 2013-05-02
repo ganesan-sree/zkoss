@@ -1,6 +1,10 @@
 package com.calender.newsfeed.controllers;
 
+import java.util.Collection;
+
 import org.zkoss.calendar.event.CalendarsEvent;
+import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.util.GenericForwardComposer;
 import org.zkoss.zul.Chart;
 import org.zkoss.zul.Combobox;
@@ -10,8 +14,11 @@ import org.zkoss.zul.Window;
 import com.calender.newsfeed.data.NewsColors;
 import com.calender.newsfeed.models.DatabaseCalendarModel;
 import com.calender.newsfeed.models.NewsItem;
+import com.lowagie.text.pdf.hyphenation.TernaryTree.Iterator;
 
 public class EventUpdateController extends GenericForwardComposer {
+	
+	
 	Window updateMyEntry;
 	Combobox cmbType;
 	Textbox tbText;
@@ -35,8 +42,19 @@ public class EventUpdateController extends GenericForwardComposer {
 		CalendarsEvent evt = ((org.zkoss.calendar.event.CalendarsEvent)updateMyEntry.getAttribute("calevent"));
 		
 		Window win = (Window)updateMyEntry.getParent();
-		org.zkoss.calendar.Calendars cals = (org.zkoss.calendar.Calendars)win.getAttribute("cal", false);
-		Chart piechart = (Chart)win.getAttribute("piechart", false);
+
+		Component rootComponent=win.getRoot();
+		
+		Collection<Component> list=rootComponent.getFellows();
+		
+		java.util.Iterator<Component> it=list.iterator();
+		while(it.hasNext()){
+			System.out.println(it.next().toString());
+		}
+		
+		
+		org.zkoss.calendar.Calendars cals = (org.zkoss.calendar.Calendars)rootComponent.getFellow("cal");
+		Chart piechart = (Chart)win.getFellow("piechart", false);
 		
 		NewsItem ni = ((NewsItem)updateMyEntry.getAttribute("ni"));
 		
@@ -64,8 +82,11 @@ public class EventUpdateController extends GenericForwardComposer {
 		NewsItem ni = ((NewsItem)updateMyEntry.getAttribute("ni"));
 		
 		Window win = (Window)updateMyEntry.getParent();
-		org.zkoss.calendar.Calendars cals = (org.zkoss.calendar.Calendars)win.getAttribute("cal", false);
-		Chart piechart = (Chart)win.getAttribute("piechart", false);
+
+		Component rootComponent=win.getRoot();
+			
+		org.zkoss.calendar.Calendars cals = (org.zkoss.calendar.Calendars)rootComponent.getFellow("cal");
+		Chart piechart = (Chart)win.getFellow("piechart", false);
 		
 		DatabaseCalendarModel.dao.deleteNewsItem(ni);
 		DatabaseCalendarModel dcm = new DatabaseCalendarModel();

@@ -49,8 +49,8 @@
 
 
 
-	<target name="compile" depends="copy_files">
-		<javac destdir="${build.home}/zksample/WEB-INF/classes" srcdir="${dir.home}">
+	<target name="compile" depends="copy_files" >
+		<javac destdir="${build.home}/zksample/WEB-INF/classes" srcdir="${dir.home}" debug="true">
 			<classpath refid="compile.classpath" />
 		</javac>
 
