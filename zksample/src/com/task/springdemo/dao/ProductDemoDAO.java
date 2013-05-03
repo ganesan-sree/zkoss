@@ -24,9 +24,9 @@ public class ProductDemoDAO {
         List<Product> products = query.getResultList();
         return products;
 	}
-
+	
 	public List<Product> findAllAvailable() {
-        return Querys.findEquals(Product.class, "available", true, em);
+        return Querys.findEquals(Product.class, "available", 1, em);
 	}
 	
 	

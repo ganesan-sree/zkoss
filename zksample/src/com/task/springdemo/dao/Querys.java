@@ -51,6 +51,7 @@ private Querys(){}
 		Root<T> r = criteria.from(clz);
 		criteria.select(r).where(cb.equal(r.get(fieldName), value));
 		
+	
 		TypedQuery<T> q = em.createQuery(criteria); 
 		
 		return q.getResultList();

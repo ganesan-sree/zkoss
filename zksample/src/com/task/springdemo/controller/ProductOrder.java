@@ -35,7 +35,7 @@ public class ProductOrder extends Cell implements IdSpace, AfterCompose {
 
 	public void afterCompose() {
 		// 1. Render the template
-		Executions.createComponents("/WEB-INF/composite/productorder.zul",
+		Executions.createComponents("/springdemo/composite/productorder.zul",
 				this, new HashMap<String, Object>() {
 					private static final long serialVersionUID = 7141348964577773718L;
 

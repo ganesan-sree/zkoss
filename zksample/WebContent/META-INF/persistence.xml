@@ -16,7 +16,7 @@
 <!-- 			<property name="hibernate.connection.driver_class" value="com.ibm.db2.jcc.DB2Driver" /> -->
 <!-- 			<property name="hibernate.connection.username" value="db2inst1" /> -->
 <!-- 			<property name="hibernate.connection.password" value="123456" /> -->
-<!-- 			<property name="hibernate.show_sql" value="true" /> -->
+			<property name="hibernate.show_sql" value="true" />
 <!-- 			<property name="hibernate.connection.url" value="jdbc:db2:file:data/store" /> -->
 <!-- 			<property name="hibernate.connection.url" value="jdbc:db2://192.168.1.6:50000/workout" /> -->
 <!-- 	<property name="hibernate.transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory"/> -->
