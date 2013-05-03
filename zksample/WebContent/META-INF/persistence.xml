@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+	<persistence-unit name="webappPersistenceUnit" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+	<non-jta-data-source>java:/workout</non-jta-data-source>
+<!-- 		<jta-data-source>java:/workout</jta-data-source> -->
+	<class>com.task.springdemo.bean.User</class>
+	<class>com.task.springdemo.bean.Product</class>
+	<class>com.task.springdemo.bean.CartItem</class>
+	<class>com.task.springdemo.bean.Order</class>
+	<class>com.task.springdemo.bean.OrderItem</class>
+        
+		<properties>		
+			<property name="hibernate.dialect" value="org.hibernate.dialect.DB2Dialect" />
+<!-- 			<property name="hibernate.connection.driver_class" value="com.ibm.db2.jcc.DB2Driver" /> -->
+<!-- 			<property name="hibernate.connection.username" value="db2inst1" /> -->
+<!-- 			<property name="hibernate.connection.password" value="123456" /> -->
+<!-- 			<property name="hibernate.show_sql" value="true" /> -->
+<!-- 			<property name="hibernate.connection.url" value="jdbc:db2:file:data/store" /> -->
+<!-- 			<property name="hibernate.connection.url" value="jdbc:db2://192.168.1.6:50000/workout" /> -->
+<!-- 	<property name="hibernate.transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory"/> -->
+<!-- 		<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup"/> -->
+   
+				<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+		</properties>
+	</persistence-unit>
+</persistence>

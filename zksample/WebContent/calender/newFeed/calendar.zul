@@ -31,7 +31,7 @@
 				</calendars>
 			</center>
 			<south title="South" maxsize="200" size="300" collapsible="true" open="false">
-				<chart id="piechart" title="What type of News?" width="400px" height="250px" type="pie" />
+				<chart id="piechart" title="What type of News?" width="400px" height="250px" type="pie" model="@{win$composer.getSimplePieModel}" />
 			</south>
 		</borderlayout>
 		

@@ -10,10 +10,10 @@
 	<property name="ear.home" 	value="${basepath}/git/zkoss/zksample"/>
 		
 	<!-- location of Server's common libraries (JBOSS) used to resolve claspath during compilation -->	
-	<!--<property name="server.common.lib" 	value="${basepath}/Softwares/jboss-6.0.0.Final/common/lib"/>-->
+	<property name="server.common.lib" 	value="${basepath}/Softwares/jboss-6.0.0.Final/common/lib"/>
 			
 	<!-- location of Server's libraries (JBOSS) used to resolve claspath during compilation -->	
-	<!--<property name="server.lib" 	value="${basepath}/Softwares/jboss-6.0.0.Final/lib"/>-->
+	<property name="server.lib" 	value="${basepath}/Softwares/jboss-6.0.0.Final/lib"/>
 	
 	
 	<!-- root location of the deploy directory in the server -->

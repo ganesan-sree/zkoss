@@ -7,6 +7,14 @@
 
 
 	<path id="compile.classpath">
+		
+		<fileset dir="${server.common.lib}/">
+					<include name="**/*.jar"/>
+			</fileset>
+
+			<fileset dir="${server.lib}/">
+				<include name="**/*.jar"/>
+			</fileset>
 
 		<fileset dir="${dir.home}/WebContent/WEB-INF/lib">
 			<include name="**/*.jar" />
@@ -43,6 +51,13 @@
 			</fileset>
 
 		</copy>
+
+		<copy todir="${build.home}/zksample/WEB-INF/classes/META-INF">
+			<fileset dir="${dir.home}/WebContent/META-INF">
+						<include name="**/*" />
+					</fileset>
+
+				</copy>
 
 
 	</target>

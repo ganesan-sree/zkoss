@@ -11,6 +11,7 @@ import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.util.GenericForwardComposer;
 import org.zkoss.zul.Chart;
+import org.zkoss.zul.SimplePieModel;
 import org.zkoss.zul.Window;
 
 import com.calender.newsfeed.models.DatabaseCalendarModel;
@@ -27,9 +28,13 @@ public class NewsController extends GenericForwardComposer {//extends SelectorCo
 	Window updateDialog = null;
 	
 	public SimpleCalendarModel getCalendarModel() {
-		DatabaseCalendarModel dcm = new DatabaseCalendarModel();
-		piechart.setModel(dcm.getSimplePieModel());
+		DatabaseCalendarModel dcm = new DatabaseCalendarModel();		
 		return dcm.getSimpleCalendarModel();
+	}
+	
+	public SimplePieModel getSimplePieModel() {		
+		DatabaseCalendarModel dcm = new DatabaseCalendarModel();
+		return dcm.getSimplePieModel();
 	}
 	
 	public void onEventCreate$cal(ForwardEvent event) {
