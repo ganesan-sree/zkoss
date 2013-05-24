@@ -1,0 +1,19 @@
+<vlayout>
+	<radiogroup>
+		<attribute name="onCheck"><![CDATA[
+			listbox.pagingPosition = self.selectedItem.label;
+		]]></attribute>
+		<vlayout>
+			<label value="Paging Indicator Placement :" />
+			<radio label="top" />
+			<radio label="bottom" checked="true" />
+			<radio label="both" />
+		</vlayout>
+	</radiogroup>
+	<div height="10px"/>
+	<checkbox label="Switch Paging Mold">
+		<attribute name="onCheck"><![CDATA[
+			listbox.pagingChild.mold = "os".equals(listbox.pagingChild.mold) ? "default" : "os";
+		]]></attribute>
+	</checkbox>
+</vlayout>
